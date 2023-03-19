@@ -42,7 +42,7 @@ function onGaleryItemClick(event) {
 
   const instance = basicLightbox.create(
     `
-		<img width="1400" height="900" src="${originalImg}">
+		<img width="1400" height="900" src="${originalImg}" alt="${galleryItems.description}">
 	`,
     {
       onShow: (instance) => {
