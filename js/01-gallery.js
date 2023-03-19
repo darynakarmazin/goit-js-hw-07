@@ -39,10 +39,11 @@ function onGaleryItemClick(event) {
   event.preventDefault();
   if (event.target.nodeName !== "IMG") return;
   const originalImg = event.target.dataset.source;
-
+  const altOriginalImg = event.target.alt;
+  // console.log(altOriginalImg);
   const instance = basicLightbox.create(
     `
-		<img width="1400" height="900" src="${originalImg}" alt="${galleryItems.description}">
+		<img width="1400" height="900" src="${originalImg}" alt="${altOriginalImg}">
 	`,
     {
       onShow: (instance) => {
